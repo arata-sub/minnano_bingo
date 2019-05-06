@@ -4,7 +4,13 @@ let button = document.querySelector('#button1');
 button.addEventListener('click', bingoStart);
 
 let id;
+let rouletteFlg = false;
 function bingoStart() {
+    if (rouletteFlg == true) {
+        console.log("Now Rouletting");
+        return;
+    }
+    rouletteFlg = true;
     document.getElementById('sound-file').play();
     button.textContent="Now Rouletting...";
     id = setInterval(dispRandomNumber, 180);
@@ -37,6 +43,7 @@ function renderingOutputedBingo(number) {
     let liNumber = document.querySelector(number);
     liNumber.setAttribute('class', 'outputedNumber');
     button.textContent="Start";
+    rouletteFlg = false;
 }
 
 /**
