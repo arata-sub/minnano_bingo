@@ -63,9 +63,9 @@ body {
 @media (max-width: 600px) {
     .rouletteBingoBox .renderingBox {
         box-sizing: border-box;
-        width: 360px;
-        height: 360px;
-        padding-top: 80px;
+        width: 340px;
+        height: 340px;
+        padding-top: 70px;
 
     }
 }
