@@ -6,6 +6,7 @@ button.addEventListener('click', bingoStart);
 let id;
 function bingoStart() {
     document.getElementById('sound-file').play();
+    button.textContent="Now Rouletting...";
     id = setInterval(dispRandomNumber, 180);
     setTimeout(renderingBingo, 3400);
 }
@@ -35,6 +36,7 @@ function renderingBingo() {
 function renderingOutputedBingo(number) {
     let liNumber = document.querySelector(number);
     liNumber.setAttribute('class', 'outputedNumber');
+    button.textContent="Start";
 }
 
 /**
