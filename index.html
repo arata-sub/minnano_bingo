@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <title>みんなのビンゴ</title>
+        <link rel="stylesheet" href="default.css">
+        <link rel="icon" href="favicon.ico">
+        <meta charset="utf-8">
+        <meta name="description" content="会社のビンゴでつかってください！">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    </head>
+    <body>
+        <div class="rouletteBingoBox">
+            <div class="renderingBox">Bingo!</div>
+            <button id="button1" class="start">Start</button>
+        </div>
+        <div class="outputedBingoBox">
+            <ul>
+                <script>
+                    for (let i = 1; i < 76; i++) {
+                        document.write('<li class="b' + i + '">' + i + '</li>');
+                    }
+                </script>
+            </ul>
+        </div>
+        <audio id="sound-file" preload="auto">
+                <source src="結果発表.mp3" type="audio/mp3">
+            </audio>
+        <script src="default.js"></script>
+    </body>
+</html>
